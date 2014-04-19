@@ -156,6 +156,13 @@
 						<pre><code data-trim contenteditable>$ touch README.md</code></pre>
 						<p>En Windows</p>
 						<pre><code data-trim contenteditable>$ start notepad++ README.md</code></pre>
+						<h2>Edición Colaborativa de un articulo</h2>
+						<p><a href="http://www.wired.com/2012/02/github-revisited/">Wired</a> publico <a href="https://github.com/WiredEnterprise/Lord-of-the-Files">un articulo</a> sobre GitHub desde GitHub.</p>
+						<p>Links:</p>
+						<ol>
+							<li>https://github.com/WiredEnterprise/Lord-of-the-Files</li>
+							<li>http://www.wired.com/2012/02/github-revisited/</li>
+						</ol>
 					</section>
 					<aside class="notes"></aside>
 
@@ -203,6 +210,7 @@
 					<aside class="notes">Flask es un python microframework que usaremos para hacer la app.</aside>
 
 					<section>
+<<<<<<< HEAD
 						<h3>Crear archivo app.py</h3>
 						<p>para configurar Flask</p>
 						<pre>
@@ -542,6 +550,7 @@
 				</section>
 
 				<section>
+<<<<<<< HEAD
 					<section>
 						<h3>Agreguemos página de detalles por incendio</h3>
 						<p>Agregamos una nueva ruta en app.py</p>
@@ -939,6 +948,7 @@
 
 
 					<section>
+<<<<<<< HEAD
 						<h3>Correrlo desde linea de comandos</h3>
 						<p>Ahora se generan muchos más archivos en build.</p>
 						<pre>
@@ -946,6 +956,35 @@
 								$ python freeze.py
 							</code>
 						</pre>
+=======
+						<h2>Como usar GitHub y GitHub Pages para publicar contenido</h2>
+						<p>Para tu cuenta u organización: username.github.io</p>
+						<p>Para tu repositorio: username.github.io/repositorio</p>
+						<p>Se puede agregar dominios y usar Jekyll para crear la web<p>
+					</section>
+					<section>
+						<h2>Para tu cuenta</h2>
+						<ol>
+						<li>Crear repositorio 'username.github.io' donde username es el nombre de tu cuenta</li>
+						<li>Clonar localmente</li>
+						<li>Crear index. $ echo "Hola Mundo!" > index.html</li>
+						<li>Enviar cambios a github.
+								<pre><code data-trim contenteditable>git add --all</code></pre>
+								<pre><code data-trim contenteditable>git commit -m "Commit inicial"</code></pre>
+								<pre><code data-trim contenteditable>git push</code></pre>
+							</li>
+						<li>Ir a http://username.github.io</li>
+					</ol>
+					</section>
+					<section>
+						<h2>Para tu proyecto</h2>
+						<ol>
+							<li>Crear un repositorio.</li>
+							<li>Ir a settings/seccion github pages y clickear en 'Automatic Page Generator'</li>
+							<li>Agregar contenido</li>
+							<li>Elegir un theme y cliquear en el botón 'Publish'</li>
+							<li>Pronto en username.github.io/repositorio
+						</ol>
 					</section>
 
 					<section>
