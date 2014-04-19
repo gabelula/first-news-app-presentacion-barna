@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>GitHub para Periodistas</title>
+		<title>Crea tu propia aplicación de datos Open Source</title>
 
 		<meta name="description" content="Presentación en español sobre git, github y control de versiones para periodistas o interesados en periodismo de datos.">
 		<meta name="author" content="Gabriela Rodriguez">
@@ -42,371 +42,951 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
 				<section>
-					<h1>GitHub para Periodistas</h1>
-					<h3>¿Control de Versiones?</h3>
+					<h1>Aplicación de Datos</h1>
+					<h3>¡tú puedes!</h3>
 					<p>
 						<small>Presentación por <a href="http://gaba.stayover.org">Gabriela "Gaba" Rodriguez</a> / <a href="http://twitter.com/gaba">@gaba</a> / <a href="http://www.opennews.org">Open News Fellow 2014</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Control de Versiones</h2>
-					<p>
-						¿Por qué nos sirve software que maneje versiones?
-					</p>
-
+					<h3>¿Qué es una aplicación de noticias?</h3>
+					<p>¿Qué vamos a hacer?</p>
 					<aside class="notes">
-						Sistema que registra los cambios realizados a un archivo a lo largo del tiempo. Te ayuda a recuperar archivos perdidos, a  ir versiones anteriores del archivo, a encontrar en que momento se introdujo un bug en el software, a unir diferentes versiones de un documento de forma más naturalizada.  GIT es un software de control de versiones que se realizo para guardar los cambios al corazón de Linux. Hay otros softwares que se usaban antes como SVN o CVS. Actualmente también se usan Bazaar o Mercurial.
+						Una web que muestre la base de datos y un mapa interactivo de incendios en España.
 					</aside>
 				</section>
 
 				<section>
 					<section>
-						<h2>¿Por que Git?</h2>
+						<h3>Pre-requisitos</h3>
 					</section>
 					<section>
-						<h2>Guarda fotos, no diferencias</h2>
-						<p>Git almacena la información como instantáneas del proyecto a lo largo del tiempo.</p>
-					  <img width="178" height="238" src="images/git_versiones.png" alt="GIT Versiones">
+						<h3>Linea de Comandos</h3>
+						<p><p>
 					</section>
-					<aside class="notes">Ayuda a recuperar archivos perdidos. Cada foto de la situación de los archivos es el conjunto de archivos en un momento del tiempo. Esto hace que GIT sea un mini-sistema de archivos con muchas herramientas potentes construidas sobre él.</aside>
+					<aside class="notes"></aside>
 					<section>
-						<h2>Funciona casi exclusivamente localmente</h2>
-						<p>No necesitamos un servidor para trabajar con GIT</p>
+						<h3>Editor de Texto</h3>
+						<p>Un editor de texto plano. No sirve Word pues agrega formato y otras cosas al texto que no necesitamos. Recomendaciones: notepad, sublime, gedit<p>
 					</section>
-					<aside class="notes">La mayoría de las operaciones en Git sólo necesitan archivos y recursos locales para operar. Se puede ver la historia de cambios en GIT sin ir a ningún servidor remoto. </aside>
+					<aside class="notes"></aside>
 					<section>
-						<h2>Integridad</h2>
-						<p>GIT esta observandolo todo</p>
+						<h3>Git y GitHub</h3>
+						<p><p>
 					</section>
-					<aside class="notes">Es imposible cambiar un archivo sin que GIT lo sepa.</aside>
+					<aside class="notes"></aside>
 					<section>
-						<h2>GIT siempre añade información</h2>
-						<p>Todo es recuperable</p>
-					</section>
-					<aside class="notes">Cuando realizas acciones en Git, casi todas ellas sólo añaden información a la base de datos de Git. Es muy difícil conseguir que el sistema haga algo que no se pueda deshacer, o que de algún modo borre información.</aside>
-				</section>
-
-				<section>
-						<h2>¿Por que GitHub?</h2>
-						<ol>
-							<li>Red social</li>
-							<li>Colaboración con periodistas y programadores</li>
-							<li>Guardar datos, mapas y código propio</li>
-						</ol>
-				</section>
-				<aside class="notes">Github es una red social, donde tu puedes subir tu repositorio publico o privado (mediante planes de suscripción), puedes enviar modificaciones a repositorios de otra gente, reportar problemas o nuevos requerimientos a otros repositorios, crear organizaciones y mucho más.
-					Ir a la página de GitHub y explicar un poco la interfase (fork, pull requests, organizations, colaboradores).
-			</aside>
-				<section>
-					<section>
-						<h2>¿Por que para un periodista?</h2>
-						<p>
-							colaboración en articulos, datos, proyectos
-						</p>
-					</section>
-					<aside class="notes">Para periodistas, Github es un lugar donde guardar datos, mapas y código que puedan generar para sus propios proyectos. También es un lugar donde se puede colaborar con otros periodistas y/o programadores.</aside>
-					<section>
-						<h2>VozData en La Nacion</h2>
-						<ol>
-							<li>potencio la colaboración entre programadores</li>
-							<li>llevo control de los nuevos requerimientos y bugs</li>
-						</ol>
-					</section>
-					<aside class="notes">Mostrar proyecto en GitHub</aside>
-					<section>
-						<h2>Edición Colaborativa de un articulo</h2>
-						<p><a href="http://www.wired.com/2012/02/github-revisited/">Wired</a> publico <a href="https://github.com/WiredEnterprise/Lord-of-the-Files">un articulo</a> sobre GitHub desde GitHub.</p>
-					</section>
-					<aside class="notes">
-						Traducciones, pull requests sobre cambios.
-					</aside>
-					<section>
-						<h2>Publicar tutoriales</h2>
-						<p>Repositorio de manuales técnicos para periodistas. Como por ejemplo "<a href="https://github.com/ireapps/first-news-app">Como construir tu primera aplicación de noticias</a>"(en ingles) o "<a href="https://github.com/gabelula/github-para-periodistas">GitHub para periodistas</a>".</p>
-					</section>
-					<aside class="notes">Pueden "forkear" ese repositorio y hacerle cambios.</aside>
-					<section>
-						<h2>Publicar tu página web</h2>
-						<p>GitHub Pages con Jekyll</p>
-					</section>
-					<aside class="notes">GitHub Pages es una facilidad de GitHub en donde cualquiera puede publicar páginas webs en GitHub. Soporta Jekyll que es un generador de páginas estaticas.</aside>
-				</section>
-
-				<section>
-					<section>
-						<h2>Conceptos Basicos</h2>
+						<h3>Python</h3>
 						<p></p>
 					</section>
+					<aside class="notes"></aside>
 					<section>
-						<h2>Los tres estados</h2>
-						<p> Git tiene tres estados principales en los que se pueden encontrar tus archivos
-							<ol>
-								<li>confirmado (committed)</li>
-								<li>modificado (modified)</li>
-								<li>preparado  (staged)</li>
+						<h3>pip</h3>
+						<p>un manejador de packetes para python</p>
+					</section>
+					<aside class="notes"><aside>
+					<section>
+						<h3>virtualenv</h3>
+						<p>manejador de ambientes virtuales</p>
+					</section>
+					<aside class="notes"></aside>
+				</section>
+
+				<section>
+					<section>
+							<h3>Empezando por crear el ambiente</h3>
+							<p>
+								Abrir la terminal, ir a donde se quiere crear la aplicación y crear un ambiente virtual llamado mi-app.
 							</p>
+							<pre><code data-trim contenteditable>$ virtualenv mi-app</code></pre>
 					</section>
-					<aside class="notes">Confirmado significa que los datos están almacenados de manera segura en tu base de datos local.
-						Modificado significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos.
-						Preparado significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima confirmación.</aside>
-					<section>
-						<h2>Las tres secciones principales para un proyecto en GIT</h2>
-							<ol>
-								<li>directorio de GIT</li>
-								<li>directorio de trabajo</li>
-								<li>área de preparación</li>
-							</ol>
-						<img src="images/tres_estados.png" style="float:right;">
-					</section>
-					<aside class="notes">Directorio de Git: es donde git almacena los metadatos y la base de datos de objectos del proyecto.
+					<aside class="notes">Esto crea un directorio llamado mi-app. Hay que crear el directorio virtual sólo una vez.</aside>
 
-Directorio de trabajo: es la copia de una versión del proyecto. Es la versión que se puede modificar o usar.
+					<section>
+						<h3>Activar el ambiente virtual</h3>
+						<p>En Mac/Linux</p>
+						<pre><code data-trim contenteditable>
+							$ cd mi-app
+						</code></pre>
+						<pre><code data-trim contenteditable>
+							$ . bin/activate
+						</code></pre>
 
-Área de preparación: es un archivo que almacena información de lo que va a ir en la próxima confirmación.</aside>
-					<section>
-						<h2>Flujo de trabajo</h2>
-						<ol style="list-style-type: decimal;">
-							<li>Se modifica archivos en tu directorio de trabajo.</li>
-							<li>Se añaden los archivos al área de preparación.</li>
-							<li>Se confirman los cambios, que lo que hace es tomar los archivos del área de preparación y los almacena de forma permanente en el directorio de Git.</li>
-						</ol>
+						<p>En Windows</p>
+						<pre><code data-trim contenteditable>
+							$ cd Scripts
+						</code></pre>
+						<pre><code data-trim contenteditable>
+							$ activate
+						</code></pre>
+						<pre><code data-trim contenteditable>
+							$ cd ..
+						</code></pre>
 					</section>
 					<aside class="notes"></aside>
-					<section>
-						<h2>Repositorio</h2>
-						<p>Se le llama al conjunto/sistema de archivos que se estan guardando en el proyecto.</p>
-					</section>
-					<aside class="notes">Hay archivos que estan y hay otros que se pueden excluir de guardarlos en el repositorio. Esto se hace incluyendo el nombre del archivo a un archivo .gitignore
-						Poner ejemplos desde github.
-					</aside>
-					<section>
-						<h2>Clonar</h2>
-						<p>Copia un repositorio remoto en el disco local.</p>
-					</section>
-					<aside class="notes"></aside>
-					<section>
-						<h2>Fork</h2>
-						<p>Es un termino usado en GitHub para crear una copia (en github) de un repositorio de otra persona u organización. Esto se hace para colaborar sobre un proyecto ya existente o usar ese repositorio como base de tu propio proyecto.</p>
-					</section>
-					<aside class="notes"></aside>
-					<section>
-						<h2>Push y Pull</h2>
-						<p>Cuando se hacen cambios localmente y se quieren enviar a GitHub (u otro repositorio remoto) se hace "un push" para empujar esos cambios al remoto.</p>
-						<p>Cuando se quieren traer cambios desde un repositorio remoto se hace "un pull" para tomar los cambios hacia el local.</p>
-					</section>
-					<aside class="notes"></aside>
-					<section>
-						<h2>Branches</h2>
-						<p>Branches(ramas) permite hacer cambios y experimentar con tu repositorio sin afectar tu proyecto. Se pueden crear ramas de diferentes caminos que tu repositorio pueda tomar. Esas ramas se pueden unir en git luego si asi se quiere.</p>
-					</section>
-					<aside class="notes"></aside>
-					<section>
-						<h2>Pull Request</h2>
-						<p>Se usa en GitHub para hacer pedidos a un proyecto forkeado de que una los cambios que hiciste en tu repositorio.</p>
-					</section>
-					<aside class="notes">Explicar mostrando interface en github.</aside>
 				</section>
 
 				<section>
-					<h2>Como instalar Git</h2>
+					<section>
+						<h3>¡Hola Git! Crear repositorio GIT local</h3>
+						<pre><code data-trim contenteditable>
+							$ git init repo
+						</code></pre>
+						<pre><code data-trim contenteditable>
+							$ cd repo
+						</codE></pre>
+					</section>
+					<aside class="notes"></aside>
+
+					<section>
+						<h3>Ir a GitHub y crear repositorio llamado mi-app-datos </h3>
+						<p>No seleccionar "Initialize with README". Empezaremos con un repositorio en blanco.</p>
+						<p>Ir a tu directorio local (repo) y agregar el repositorio remoto</p>
+						<pre><code data-trim contenteditable>git remote add origin https://github.com/mi-usuario-en-github/mi-app-datos.git</code></pre>
+					</section>
+					<aside class="notes">					</aside>
+
+					<section>
+						<h3>Crear tu primer archivo</h3>
+						<p>un archivo en blanco README con una extension Markdown</p>
+						<p>En Mac o Linux</p>
+						<pre><code data-trim contenteditable>$ touch README.md</code></pre>
+						<p>En Windows</p>
+						<pre><code data-trim contenteditable>$ start notepad++ README.md</code></pre>
+					</section>
+					<aside class="notes"></aside>
+
+					<section>
+						<h3>Abrir README.md en tu editor preferido</h3>
+						<p>Escribir algo como</p>
+						<pre>
+							<code contenteditable>
+									Mi primera aplicación de datos
+									==============================
+							</code>
+						</pre>
+						<p>Guardarlo.</p>
+					</section>
+					<aside class="notes"></aside>
+
+					<section>
+						<h3>Agregarlo a Git</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add README.md
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git commit -m "Primer commit"
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+					<aside class="notes"></aside>
+				</section>
+
+				<section>
+					<section>
+						<h3>¡Hola Flask!</h3>
+						<p>Usar pip para instalar Flask</p>
+						<pre><code data-trim contenteditable>$ pip install Flask</code></pre>
+					</section>
+					<aside class="notes">Flask es un python microframework que usaremos para hacer la app.</aside>
+
+					<section>
+						<h3>Crear archivo app.py</h3>
+						<p>para configurar Flask</p>
+						<pre>
+							<code data-trim contenteditable>
+								# Mac y Linux:
+								$ touch app.py
+							</code>
+						</pre>
+						<pre><code data-trim contenteditable>
+								# Windows:
+								$ start notepad++ app.py
+							</code>
+						</pre>
+					</section>
+					<aside class="notes"></aside>
+
+					<section>
+						<h3>Abrir app.py en un editor</h3>
+						<p></p>
+						<pre>
+							<code contenteditable>
+								from flask import Flask
+								app = Flask(__name__)
+							</code>
+						</pre>
+					</section>
+					<aside class="notes">Aqui estamos importando lo basico de Flask. Este archivo sera el backend de la aplicación.</aside>
+
+					<section>
+						<h3>Configurar para hacer la raíz de tu sitio</h3>
+						<p>Usaremos un archivo llamado 'index.html' para colocar la información. Tenemos que especificarlo en app.py</p>
+						<pre>
+							<code contenteditable>
+								from flask import Flask
+								from flask import render_template
+								app = Flask(__name__)
+
+								@app.route("/")
+								def index():
+								    return render_template('index.html')
+							</code>
+						</pre>
+					</section>
+					<aside class="notes"></aside>
+
+					<section>
+						<h3>Ir a linea de comandos</h3>
+						<p>crear directorio templates en el mismo repositorio en que estamos.</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ mkdir templates
+							</code>
+						</pre>
+					</section>
+					<aside class="notes"></aside>
+
+					<section>
+						<h3>Crear index.html</h3>
+						<p>dentro del directorio templates</p>
+						<pre>
+							<code data-trim contenteditable>
+								# Macs y Linux:
+								$ touch templates/index.html
+							</code>
+						</pre>
+						<pre><code data-trim contenteditable>
+								# Windows:
+								$ start notepad++ templates/index.html
+							</code>
+						</pre>
+					</section>
+					<aside class="notes"></aside>
+
+					<section>
+						<h3>Volver a editar app.py</h3>
+						<p>y agregarle lo siguiente para poder levantar el servidor local de Flask</p>
+						<pre>
+							<code data-trim contenteditable>
+								from flask import Flask
+								from flask import render_template
+								app = Flask(__name__)
+
+								@app.route("/")
+								def index():
+								    return render_template('index.html')
+
+								if __name__ == '__main__':
+								    app.run(
+								        host="0.0.0.0",
+								        port=8000,
+								        use_reloader=True,
+								        debug=True,
+								    )
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Correr app.py en la linea de comandos</h3>
+						<p>Mirar el resultado en un navegador en http://localhost:8000</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ python app.py
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Agrega tu trabajo a GIT</h3>
+						<p>cancela lo que este corriendo de app.py (CTR-C) en la terminal</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add .
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git commit -m "Flask app.py and first template"
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>¡Hola HTML!</h3>
+						<p>Comenzar nuevamente editando index.html. Reemplazar el contenido por el esqueleto de un archivo HTML</p>
+						<pre>
+
+								<xmp>
+									<!doctype html>
+									<html lang="es">
+									    <head></head>
+									    <body>
+									        <h1>Incendios en España entre 2004 y 2014</h1>
+									    </body>
+									</html>
+								</xmp>
+
+						</pre>
+					</section>
+					<section>
+						<h3>Commitear los cambios al repositorio</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add templates/index.html
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git commit -m "Real HTML"
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Crear directorio para guardar archivos estaticos</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								$ mkdir static
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Guardar archivo CSV</h3>
+						<p>descargarlo desde BLAH BLAH y guardarlo en directorio static. Agregarlo a git</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add static
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git commit -m "Agregando fuente de datos CSV"
+							</code>
+						</pre>
+						<pre>
+							<code data-trim contenteditable>
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Abrir app.py en editor de texto</h3>
+						<p>Usaremos libreria csv para acceder a nuestros datos</p>
+						<pre>
+							<code contenteditable>
+								import csv
+								from flask import Flask
+								from flask import render_template
+								app = Flask(__name__)
+
+								csv_path = './static/la-riots-deaths.csv'
+								csv_obj = csv.DictReader(open(csv_path, 'r'))
+								csv_list = list(csv_obj)
+
+								@app.route("/")
+								def index():
+								    return render_template('index.html')
+
+								if __name__ == '__main__':
+								    app.run(
+								        host="0.0.0.0",
+								        port=8000,
+								        use_reloader=True,
+								        debug=True,
+								    )
+
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Pasar el el csv a index.html</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								import csv
+								from flask import Flask
+								from flask import render_template
+								app = Flask(__name__)
+
+								csv_path = './static/la-riots-deaths.csv'
+								csv_obj = csv.DictReader(open(csv_path, 'r'))
+								csv_list = list(csv_obj)
+
+								@app.route("/")
+								def index():
+								    return render_template('index.html',
+								        object_list=csv_list,
+								    )
+
+								if __name__ == '__main__':
+								    app.run(
+								        host="0.0.0.0",
+								        port=8000,
+								        use_reloader=True,
+								        debug=True,
+								    )
+
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Guardar app.py y editar index.html</h3>
+						<p>Colocar la lista del csv en el index.html</p>
+						<pre>
+								<xmp>
+									<!doctype html>
+									<html lang="es">
+											<head></head>
+											<body>
+													<h1>Incendios en España entre 2004 y 2014</h1>
+													{{ object_list }}
+											</body>
+									</html>
+								</xmp>
+						</pre>
+						<p>En linea de comandos correr app.py y visitar http://localhost:8000 nuevamente</p>
+					</section>
+					<section>
+						<h3>Vamos a darle formato a los datos en index.html</h3>
+						<p>Estamos usando el lenguaje de templating jinja de Flask</p>
+						<xmp>
+							<!doctype html>
+							<html lang="en">
+							    <head></head>
+							    <body>
+							        <h1>Deaths during the L.A. riots</h1>
+							        <table border=1 cellpadding=7>
+							            <tr>
+							                <th>Name</th>
+							            </tr>
+							        {% for obj in object_list %}
+							            <tr>
+							                <td>{{ obj['COMUNIDAD'].decode('UTF-8') }}</td>
+							            </tr>
+							        {% endfor %}
+							        </table>
+							    </body>
+							</html>
+						</xmp>
+					</section>
+					<section>
+						<h3>Refrescar el navegador con nuestra aplicación</h3>
+						<p>Y luego volver a colocar más datos. Sustituir la tag table entera por esta (o los datos que les parezca interesantes).</p>
+						<xmp>
+								    <table border=1 cellpadding=7>
+							        <tr>
+							            <th>Superficie Forestal Quemada</th>
+							            <th>Fecha</th>
+							            <th>Muertos</th>
+							            <th>Heridos</th>
+							            <th>Comunidad</th>
+							            <th>Provincia</th>
+							            <th>Comarca</th>
+							            <th>Causa</th>
+							            <th>Perdidas</th>
+							        </tr>
+							    {% for obj in object_list %}
+							        <tr>
+							            <td>{{ obj['SUPQUEMADA'] }}</td>
+							            <td>{{ obj['FECHA'] }}</td>
+							            <td>{{ obj['MUERTOS'] }}</td>
+							            <td>{{ obj['HERIDOS'] }}</td>
+							            <td>{{ obj['COMUNIDAD'].decode('UTF-8') }}</td>
+							            <td>{{ obj['PROVINCIA'].decode('UTF-8') }}</td>
+							            <td>{{ obj['COMARCA'].decode('UTF-8') }}</td>
+							            <td>{{ obj['CAUSA'].decode('UTF-8')  }}</td>
+							            <td>{{ obj['PERDIDAS'] }}</td>
+							        </tr>
+							    {% endfor %}
+							    </table>
+						</xmp>
+					</section>
+					<section>
+						<h3>Refrescar el navegador</h3>
+						<p>y luego commitear tu trabajo</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add .
+								$ git commit -m "Creamos tabla de datos"
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Agreguemos página de detalles por incendio</h3>
+						<p>Agregamos una nueva ruta en app.py</p>
+						<pre>
+							<code data-trim contenteditable>
+								import csv
+								from flask import Flask
+								from flask import render_template
+								app = Flask(__name__)
+
+								csv_path = './static/incendios.csv'
+								csv_obj = csv.DictReader(open(csv_path, 'r'))
+								csv_list = list(csv_obj)
+
+								@app.route("/")
+								def index():
+								    return render_template('index.html',
+								                           object_list=csv_list
+								                          )
+
+								@app.route('/<number>/')
+								def detail(number):
+								    return render_template('detail.html')
+
+								if __name__ == '__main__':
+								  app.run(
+								      host="0.0.0.0",
+								      port=8000,
+								      use_reloader=True,
+								      debug=True,
+								  )
+
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Agreguemos el template detail.html</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								# Macs y Linux:
+								$ touch templates/detail.html
+								# Windows:
+								$ start notepad++ templates/detail.html
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Editamos el archivo detail.html</h3>
+						<p>Agregar algo simple. Y levantamos la página en el navegador con cualquier número. http://localhost:8000/2004210126/</p>
+						<pre>
+							<code data-trim contenteditable>
+								¡Hola España!
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Buscamos el incendio</h3>
+						<p>Conectamos el número en la URL con el número identificador real del incendio en el CSV.</p>
+						<p>Editamos app.py y convertimos la lista que tenemos en algo donde el incendio sea fácilmente buscable por identificador</p>
+						<pre>
+							<code data-trim contenteditable>
+								csv_path = './static/incendios.csv'
+								csv_obj = csv.DictReader(open(csv_path, 'r'))
+								csv_list = list(csv_obj)
+								csv_dict = dict([[o['IDPIF'], o] for o in csv_list])
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Editamos la función detail en app.py</h3>
+						<p>para que conecte el número en la URL con el registro correspondiente.</p>
+						<pre>
+							<code data-trim contenteditable>
+								@app.route('/<number>/')
+								def detail(number):
+								    return render_template('detail.html',
+								        object=csv_dict[number],
+								    )
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Volver a editar detail.html</h3>
+						<p></p>
+						<xmp>
+								<!doctype html>
+								<html lang="es">
+								    <head>
+											<meta name="Incendios en España"  content="text/html;" http-equiv="content-type" charset="utf-8">
+										</head>
+								    <body>
+								        <h1>{{ object['COMUNIDAD'].decode('UTF-8') }}</h1>
+								    </body>
+								</html>
+						</xmp>
+					</section>
+
+					<section>
+						<h3>Reiniciar el servidor y refrescar el navegador del incendio</h3>
+						<p>http://localhost:8000/2004210126/</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ python app.py
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Editar index.html para enlazar la página del incendio</h3>
+						<p>En la table reemplazar la fila de <xmp><td>{{ obj['IDPIF'] }}</td></xmp> por </p>
+						<pre>
+							<code data-trim contenteditable>
+								<td><a href="{{ obj['IDPIF'] }}/">{{ obj['IDPIF'] }}</a></td>
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Reiniciar el servidor de pruebas y refrescar el navegador</h3>
+						<p>http://localhost:8000</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ python app.py
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Agregar el resto de los campos del incendio</h3>
+						<p>en detail.html</p>
+<xmp>
+<body>
+  <h1>Incendio de {{ object['COMUNIDAD'].decode('UTF-8') }}</h1>
+  <p>En la comunidad {{ object['COMUNIDAD'].decode('UTF-8') }}, provincia {{ object['PROVINCIA'].decode('UTF-8') }}, comarca {{ object['COMARCA'].decode('UTF-8') }}, municipio {{ object['MUNICIPIO'].decode('UTF-8') }} se quemó una superficie forestal de {{ object['SUPQUEMADA'] }}. Hubieron {{ object['MUERTOS'] }} muertos y {{ object['HERIDOS'] }} heridos. Se detectó en la fecha {{ object['FECHA'] }}. Se pudo controlar en {{ object['TIME_CTRL'] }} minutos y extinguir en {{ object['TIME_EXT'] }} minutos. La causa del incendio fue {{ object['CAUSA'].decode('UTF-8') }}. En la extinción del incendio participaron {{ object['PERSONAL'] }} personas, {{ object['PESADOS'] }} vehiculos pesados y {{ object['AEREOS'] }} medios aereos.</p>
+</body>
+</xmp>
+					</section>
+
+					<section>
+						<h3>Comitear en GIT</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add .
+								$ git commit -m "Creamos una página por incendio."
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>¡Hola Javascript!</h2>
+						<p>Ahora vamos a colocar un mapa con los incendios usando una libreria de Javascript llamada Leaflet. Primero hay que importarla en el index.html</p>
+						<xmp>
+  <head>
+		<meta name="Incendios en España"  content="text/html;" http-equiv="content-type" charset="utf-8">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+	</head>
+						</xmp>
+					</section>
+
+					<section>
+						<h3>Crear un elemento HTML para el mapa</h3>
+						<p>y usar Leaflet para centrarlo en España</p>
+						<pre>
+							<code data-trim contenteditable>
+								<body>
+									<div id="map" style="width:100%; height:300px;"></div>
+									... aca esta la table ...
+							    <script type="text/javascript">
+							      var map = L.map('map').setView([40.2085,-3.713], 6);
+							      var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+							          maxZoom: 18,
+							          attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+							          subdomains: ['otile1','otile2','otile3','otile4']
+							      });
+							      map.addLayer(mapquestLayer);
+							    </script>
+								</body>
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Transformar los datos que tenemos en GeoJSON, que lea Leaflet</h3>
+						<p>Lo hacemos en el mismo Javascript</p>
+						<pre>
+							<code data-trim contenteditable>
+								    <script type="text/javascript">
+								      var map = L.map('map').setView([40.2085,-3.713], 6);
+								      var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+								          maxZoom: 18,
+								          attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+								          subdomains: ['otile1','otile2','otile3','otile4']
+								      });
+								      map.addLayer(mapquestLayer);
+
+								      var data = {
+								        "type": "FeatureCollection",
+								        "features": [
+								          {% for obj in object_list %}
+								          {
+								            "type": "Feature",
+								            "properties": {
+								              "causa": "{{ obj['CAUSA'].decode('UTF-8') }}",
+								              "id": "{{ obj['IDPIF'] }}"
+								            },
+								            "geometry": {
+								              "type": "Point",
+								              "coordinates": [{{ obj['LONGITUD'] }}, {{ obj['LATITUD'] }}]
+								            }
+								          }{% if not loop.last %},{% endif %}
+								          {% endfor %}
+								        ]
+								      };
+								      var dataLayer = L.geoJson(data);
+								      map.addLayer(dataLayer);
+								    </script>
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Agregar una ventanita popup que muestre información de la superficie quemada</h3>
+						<p>Sustituir</p>
+						<pre>
+							<code data-trim contenteditable>
+								var dataLayer = L.geoJson(data);
+							</code>
+						</pre>
+						<p>por</p>
+						<pre>
+							<code data-trim contenteditable>
+					      var dataLayer = L.geoJson(data, {
+					          onEachFeature: function(feature, layer) {
+					              layer.bindPopup(feature.properties.causa);
+					          }
+					      });
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Y ahora envolver la superficie por un link al incendio</h3>
+						<p>Sustituir lo anterior por</p>
+						<pre>
+							<code data-trim contenteditable>
+								            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.id + '/">' +
+                            feature.properties.causa +
+                        '</a>'
+                    );
+                }
+            });
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Comitear los cambios</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add .
+								$ git commit -m "Agregamos un mapa a la página principal."
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Editar detail.html</h3>
+						<p>para agregar un mapa especifico del incendio.</p>
+						<xmp>
+							<!doctype html>
+							<html lang="es">
+							  <head>
+							   <meta name="Incendios en España"  content="text/html;" http-equiv="content-type" charset="utf-8">
+							   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+							   <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+							  </head>
+							  <body>
+							      <div id="map" style="width:100%; height:300px;"></div>
+							      <h1>Incendio de {{ object['COMUNIDAD'].decode('UTF-8') }}</h1>
+							      <p>En la comunidad {{ object['COMUNIDAD'].decode('UTF-8') }}, provincia {{ object['PROVINCIA'].decode('UTF-8') }}, comarca {{ object['COMARCA'].decode('UTF-8') }}, municipio {{ object['MUNICIPIO'].decode('UTF-8') }} se quemó una superficie forestal de {{ object['SUPQUEMADA'] }}. Hubieron {{ object['MUERTOS'] }} muertos y {{ object['HERIDOS'] }} heridos. Se detectó en la fecha {{ object['FECHA'] }}. Se pudo controlar en {{ object['TIME_CTRL'] }} minutos y extinguir en {{ object['TIME_EXT'] }} minutos. La causa del incendio fue {{ object['CAUSA'].decode('UTF-8') }}. En la extinción del incendio participaron {{ object['PERSONAL'] }} personas, {{ object['PESADOS'] }} vehiculos pesados y {{ object['AEREOS'] }} medios aereos.</p>
+							      <script type="text/javascript">
+							        var map = L.map('map').setView([{{ object['LONGITUD'] }}, {{ object['LATITUD'] }}], 16);
+							        var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+							            maxZoom: 18,
+							            attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+							            subdomains: ['otile1','otile2','otile3','otile4']
+							        });
+							        map.addLayer(mapquestLayer);
+							        var marker = L.marker([{{ object['LONGITUD'] }}, {{ object['LATITUD'] }}]).addTo(map);
+							    </script>
+							  </body>
+							</html>
+						</xmp>
+					</section>
+
+					<section>
+						<h3>Comitear los cambios</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add .
+								$ git commit -m "Agregamos un mapa a la página de detalle."
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>¡Hola Internet!</h3>
+						<p>Ahora publicaremos nuestra aplicación de datos en Internet. Vamos a usar Frozen Flask, una libreria de Python que crea una página estatica por cada página que hicimos.</p>
+						<p>Usar pip para instalar Frosen Flask</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ pip install Frozen-Flask
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Crear un archivo freeze.py</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								# Mac y Linux:
+								$ touch freeze.py
+								# Windows:
+								$ start notepad++ freeze.py
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Editar freeze.py</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								from flask_frozen import Freezer
+								from app import app
+								freezer = Freezer(app)
+
+								if __name__ == '__main__':
+								    freezer.freeze()
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Correrlo desde linea de comandos</h3>
+						<p>Esto creara un directorio build con un monton de archivos estaticos.</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ python freeze.py
+							</code>
+						</pre>
+					</section>
+
+
+					<section>
+						<h3>Usar el navegador</h3>
+						<p>para mirar uno de los archivos generados en build. Lo único que paso a estaticos fueron las páginas de index.html. Tenemos que editar freeze.py para incluir detail.html</p>
+						<pre>
+							<code data-trim contenteditable>
+								from flask_frozen import Freezer
+								from app import app, csv_list
+								freezer = Freezer(app)
+
+								@freezer.register_generator
+								def detail():
+								    for row in csv_list:
+								        yield {'number': row['IDPIF']}
+
+								if __name__ == '__main__':
+								    freezer.freeze()
+							</code>
+						</pre>
+					</section>
+
+
+					<section>
+						<h3>Correrlo desde linea de comandos</h3>
+						<p>Ahora se generan muchos más archivos en build.</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ python freeze.py
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Comiteamos los cambios</h3>
+						<p></p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git add .
+								$ git commit -m "Congelamos la app"
+								$ git push origin master
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Finalmente publiquemos la app en github-pages</h3>
+						<p>Para esto sólo tenemos que crear un branch gh-pages en nuestro repositorio.</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git checkout -b gh-pages # Create the new branch
+								$ git merge master # Pull in all the code from the master branch
+								$ git push origin gh-pages # Push up to GitHub from your new branch
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Luego de unos minutos tu app estara publicada en</h3>
+						<p>http://tunombredeusuario.github.io/mi-app/build/index.html</p>
+				</section>
+
+				<section>
+					<h3>Tutoriales y Referencias en linea</h3>
 					<ol>
-						<li>En Mac <a href="http://code.google.com/p/git-osx-installer">instalador</a>.</li>
-						<li>En Windows <a href="http://msysgit.github.com/">instalador</a>.</li>
-						<li>En Linux mediante manejador de paquetes: apt-get install git.</li>
-					</ol>
-				</section>
-
-				<section>
-						<section>
-						<h2>LA linea de comandos</h2>
-						<p>
-							Software que tiene una pantalla donde se pueden tipear comandos para que la computadora realize diferentes tareas.
-						</p>
-						<ol>
-							<li>En Mac: application Terminal</li>
-							<li>En Windows: <a href="http://cygwin.com/install.html">instalar cygwin</a></li>
-							<li>En Linux: la consola</li>
-						</ol>
-					</section>
-					<section>
-						<h2>Sistema de archivos de una computadora</h2>
-					</section>
-					<section>
-						<h2>Ayuda I</h2>
-						<p>man comando</p>
-					</section>
-					<section>
-						<h2>Listar archivos</h2>
-						<p>ls</p>
-					</section>
-					<section>
-						<h2>Donde estoy ubicada</h2>
-						<p>pwd</p>
-					</section>
-					<section>
-						<h2>Ubicarte en un directorio</h2>
-						<p>cd directorio</p>
-					</section>
-					<section>
-						<h2>Copiar archivos</h2>
-						<p>cp archivo_a_copiar</p>
-					</section>
-					<section>
-						<h2>Mover archivos</h2>
-						<p>mv archivo_a_mover</p>
-					</section>
-					<section>
-						<h2>Borrar archivos</h2>
-						<p>rm archivo_a_borrar</p>
-					</section>
-					<section>
-						<h2>Leer archivos de texto plano</h2>
-						<ol>
-							<li>less archivo_a_leer</li>
-							<li>more archivo_a_leer</li>
-							<li>tail archivo_a_leer</li>
-							<li>head archivo_a_leer</li>
-							<li>cat archivo_a_leer</li>
-						</ol>
-					</section>
-					<section>
-						<h2>En GIT</h2>
-						<ol>
-							<li>git clone</li>
-							<li>git init</li>
-							<li>git status</li>
-							<li>git diff</li>
-							<li>git log</li>
-							<li>git add archivo_a_agregar</li>
-							<li>git commit</li>
-							<li>git push</li>
-							<li>git pull</li>
-						</ol>
-						<a href="/github-git-cheat-sheet.pdf">GIT sheet</a>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Como configurar Git</h2>
-						<p>git config : permite obtener y establecer configuración para controlar el aspecto y funcionamiento de git. Cada repositorio tiene un archivo /.git/config que contiene configuración especifica del repsitorio.</li>
-						</p>
-					</section>
-					<section>
-						<h2>Identidad es usada cuando se hacen commits</h2>
-						<pre><code data-trim contenteditable>$ git config --global user.name "Tu nombre"</code></pre>
-						<pre><code data-trim contenteditable>$ git config --global user.email "Tu email"</code></pre>
-					</section>
-					<section>
-						<h2>Editor</h2>
-						<pre><code data-trim contenteditable>$ git config --global core.editor editor_preferido</code></pre>
-						editor_preferido: vim, emacs, atom, otro
-					</section>
-					<section>
-						<h2>Herramienta de diferencias</h2>
-						<pre><code data-trim contenteditable>$ git config --global merge.tool herramienta_de_diff</code></pre>
-						herramientas_de_diff: kdiff3, tkdiff, meld, xxdiff, emerge, vimdiff, gvimdiff, ecmerge, y opendiff, otro
-					</section>
-					<section>
-						<h2>Comprobando tu configuración</h2>
-						<pre><code data-trim contenteditable>git config --list</code></pre>
-					</section>
-					<section>
-						<h2>Ayuda II</h2>
-						<pre><code data-trim contenteditable>git help <command></code></pre>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Como configurar GitHub</h2>
-						<ol>
-							<li>Crear cuenta en GitHub.</li>
-<!-- 							<li>Crear ssh key y agregarlo a la cuenta en GitHub.</li> -->
-						</ol>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Como crear un repositorio</h2>
-					</section>
-					<section>
-						<h2>Iniciando uno localmente</h2>
-						<p>Ir al directorio del proyecto: cd directorio_path</p>
-						<p>Iniciar GIT: <pre><code data-trim contenteditable>git init</code></pre></p>
-						<p>Agregar archivos: <pre><code data-trim contenteditable>git add archivos_a_agregar</code></pre></p>
-						<p>Comitear: <pre><code data-trim contenteditable>git commit -m "Version inicial."</code></pre></p>
-					</section>
-					<section>
-						<h2>Agregandolo a github</h2>
-						<ol>
-							<li>Crear repositorio en github.</li>
-							<li>Agregar el remoto a el repositorio local: <pre><code data-trim contenteditable>git remote add github_url_para_repo</code></pre></li>
-							<li>Enviar cambios: <pre><code data-trim contenteditable>git push origin master</code></pre></li>
-						</ol>
-					</section>
-				</section>
-
-				<section>
-					<h2>Como clonar uno ya existente</h2>
-					<p><pre><code data-trim contenteditable>git clone github_url_para_repo</code></pre></p>
-				</section>
-
-				<section>
-					<h2>Como usar GitHub para colaborar</h2>
-					<ol>
-						<li>Fork los repositorios a colaborar.</li>
-						<li>Crear issues de nuevos requerimientos y bugs.</li>
-						<li>Crear Pull Requests con cambios que se pueden colaborar.</li>
-						<li>Hacer comentarios en issues y en documentos del repositorio a colaborar.</li>
-						<li>Se pueden crear organizaciones donde se tienen diferentes roles y todos en la organización tienen acceso a enviar cambios a los repositorios.</li>
-					</ol>
-				</section>
-
-				<section>
-					<section>
-						<h2>Como usar GitHub y GitHub Pages para publicar contenido</h2>
-						<p>Para tu cuenta u organización: username.github.io</p>
-						<p>Para tu repositorio: username.github.io/repositorio</p>
-						<p>Se puede agregar dominios y usar Jekyll para crear la web<p>
-					</section>
-					<section>
-						<h2>Para tu cuenta</h2>
-						<ol>Crear repositorio 'username.github.io' donde username es el nombre de tu cuenta</ol>
-						<ol>Clonar localmente</ol>
-						<ol>Crear index. $ echo "Hola Mundo!" > index.html</ol>
-						<ol>Enviar cambios a github.
-								git add --all
-								git commit -m "Commit inicial"
-								git push
-							</ol>
-						<ol>List. http://username.github.io</ol>
-					</section>
-					<section>
-						<h2>Para tu proyecto</h2>
-						<ol>
-							<li>Crear un repositorio.</li>
-							<li>Ir a settings/seccion github pages y clickear en 'Automatic Page Generator'</li>
-							<li>Agregar contenido</li>
-							<li>Elegir un theme y cliquear en el botón 'Publish'</li>
-							<li>Pronto en username.github.io/repositorio
-						</ol>
-					</section>
-				</section>
-
-				<section>
-					<h2>Tutoriales y Referencias en linea</h2>
-					<ol>
-						<li>Libro <a href="http://git-scm.com/book/es/">Pro GIT</a>.</li>
-						<li>Ayuda de <a href="https://help.github.com/">GitHub</a>(en ingles).</li>
-						<li>GitHub para <a href="http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1">iniciados</a>(en ingles).</li>
-						<li>GitHub para <a href="http://dannguyen.github.io/github-for-portfolios/">portfolios</a>(en ingles).</li>
-						<li>Generador de páginas webs y blogs con <a href="http://jekyllrb.com/">Jekyll</a></li>
-						<li>Herramienta para <a href="https://github.com/schacon/git-scribe">escribir</a> libros y articulos con GIT. Git-Scribe</li>
-						<li>Esta presentación en <a href="https://github.com/gabelula/github-para-periodistas-presentacion">GitHub</a></li>
+						<li>Git y GitHub <a href="http://git-scm.com/book/es/">Pro GIT</a>.</li>
+						<li>Esta presentación en <a href="https://github.com/gabelula/first-news-presentacion">mi primera aplicación de datos</a></li>
+						<li>La inspiración para este taller</li>
+						<li>Flask</li>
+						<li>Python y Pip</li>
+						<li>Leaflet</li>
+						<li>Github Pages</li>
 					</ol>
 				</section>
 
