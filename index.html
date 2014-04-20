@@ -841,7 +841,7 @@
 						<h3>Comitear los cambios</h3>
 						<p></p>
 						<pre>
-							<code data-trim contenteditable>
+							<code contenteditable>
 								$ git add .
 								$ git commit -m "Agregamos un mapa a la página principal."
 								$ git push origin master
@@ -883,7 +883,7 @@
 						<h3>Comitear los cambios</h3>
 						<p></p>
 						<pre>
-							<code data-trim contenteditable>
+							<code contenteditable>
 								$ git add .
 								$ git commit -m "Agregamos un mapa a la página de detalle."
 								$ git push origin master
@@ -908,7 +908,7 @@
 						<h3>Crear un archivo freeze.py</h3>
 						<p></p>
 						<pre>
-							<code data-trim contenteditable>
+							<code contenteditable>
 								# Mac y Linux:
 								$ touch freeze.py
 								# Windows:
@@ -921,7 +921,7 @@
 						<h3>Editar freeze.py</h3>
 						<p></p>
 						<pre>
-							<code data-trim contenteditable>
+							<code  contenteditable>
 								from flask_frozen import Freezer
 								from app import app
 								freezer = Freezer(app)
@@ -947,7 +947,7 @@
 						<h3>Usar el navegador</h3>
 						<p>para mirar uno de los archivos generados en build. Lo único que paso a estaticos fueron las páginas de index.html. Tenemos que editar freeze.py para incluir detail.html</p>
 						<pre>
-							<code data-trim contenteditable>
+							<code  contenteditable>
 								from flask_frozen import Freezer
 								from app import app, csv_list
 								freezer = Freezer(app)
