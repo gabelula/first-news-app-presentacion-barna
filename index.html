@@ -54,7 +54,8 @@
 				<section>
 					<h3>¿Qué es una aplicación de noticias?</h3>
 					<p>¿Qué vamos a hacer?</p>
-					<p>Jugar con conjunto de datos desde http://espanaenllamas.es/</p>
+					<p>Jugar con conjunto de datos desde <a href="http://espanaenllamas.es/">http://espanaenllamas.es/</a></p>
+					<p><a href="http://gabelula.github.io/first-news-app-espanaenllamas/build/">http://gabelula.github.io/first-news-app-espanaenllamas/build/</a></p>
 					<aside class="notes">
 						Una web que muestre la base de datos y un mapa interactivo de incendios en España.
 						http://gabelula.github.io/first-news-app-espanaenllamas/build/
@@ -96,10 +97,9 @@
 						<p>En Mac: $ brew install pip</p>
 						<p>En Linux: $ apt-get install pip</p>
 					</section>
-					<aside class="notes"><aside>
 					<section>
 						<h3>virtualenv</h3>
-						<p>manejador de ambientes virtuales</p>
+						<p>manejador de ambientes virtuales, para tener control sobre el software instalado y usado para crear la aplicación</p>
 						<p>En Windows: $ c:\Python27\Scripts\pip install virtualenv</p>
 						<p>En Mac: $ pip install virtualenv</p>
 					</section>
@@ -208,6 +208,7 @@
 				<section>
 					<section>
 						<h3>¡Hola Flask!</h3>
+						<p>un micro framework para crear aplicaciones web en python</p>
 						<p>Usar pip para instalar Flask</p>
 						<pre><code data-trim contenteditable>$ pip install Flask</code></pre>
 					</section>
@@ -380,8 +381,8 @@
 						</pre>
 					</section>
 					<section>
-						<h3>Crear directorio para guardar archivos estaticos</h3>
-						<p></p>
+						<h3>Crear directorio para guardar archivos estáticos</h3>
+						<p>Aqui guardaremos el CSV con nuestros datos</p>
 						<pre>
 							<code data-trim contenteditable>
 								$ mkdir static
@@ -765,6 +766,7 @@
 					<section>
 						<h3>Transformar los datos que tenemos en GeoJSON, que lea Leaflet</h3>
 						<p>Lo hacemos en el mismo Javascript</p>
+						<p>GeoJSON es un formato para guardar estructuras de datos geograficos junto a información no geografica</p>
 						<pre>
 							<code contenteditable>
 								    <script type="text/javascript">
