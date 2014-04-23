@@ -6,7 +6,7 @@
 
 		<title>Crea tu propia aplicación de datos Open Source</title>
 
-		<meta name="description" content="Presentación en español sobre git, github y control de versiones para periodistas o interesados en periodismo de datos.">
+		<meta name="description" content="Aplicación de Noticias">
 		<meta name="author" content="Gabriela Rodriguez">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -78,131 +78,19 @@
 					</section>
 					<aside class="notes"></aside>
 					<section>
-						<h3>Git y GitHub</h3>
-						<p>En Windows http://windows.github.com</p>
-						<p>En Mac http://mac.github.com</p>
-            <p>Crear cuenta en http://github.com</p>
-					</section>
-					<aside class="notes"></aside>
-					<section>
 						<h3>Python - version 2.7</h3>
             <p>En Windows https://www.python.org/download/windows</p>
-						<p>Instrucciones http://docs.python-guide.org/en/latest/starting/install/win/</p>
+						<p>En Mac: ya está incluido</p>
+						<p>En Linux: apt-get install python</p>
 					</section>
 					<aside class="notes"></aside>
 					<section>
-						<h3>Pip o easy_install</h3>
+						<h3>Pip</h3>
 						<p>un manejador de packetes para python</p>
-						<p>Instrucciones para windows: http://docs.python-guide.org/en/latest/starting/install/win/</p>
-						<p>En Mac: $ brew install pip</p>
-						<p>En Linux: $ apt-get install pip</p>
+						<p>En Windows: http://docs.python-guide.org/en/latest/starting/install/win/</p>
+						<p>En Mac: sudo easy_install pip</a></p>
+						<p>En Linux: apt-get install pip</p>
 					</section>
-					<section>
-						<h3>virtualenv</h3>
-						<p>manejador de ambientes virtuales, para tener control sobre el software instalado y usado para crear la aplicación</p>
-						<p>En Windows: $ c:\Python27\Scripts\pip install virtualenv</p>
-						<p>En Mac: $ pip install virtualenv</p>
-					</section>
-					<aside class="notes"></aside>
-				</section>
-
-				<section>
-					<section>
-							<h3>Empezando por crear el ambiente</h3>
-							<p>
-								Abrir la terminal, ir a donde se quiere crear la aplicación y crear un ambiente virtual llamado mi-app.
-							</p>
-							<pre><code data-trim contenteditable>$ virtualenv mi-app</code></pre>
-					</section>
-					<aside class="notes">Esto crea un directorio llamado mi-app. Hay que crear el directorio virtual sólo una vez.</aside>
-
-					<section>
-						<h3>Activar el ambiente virtual</h3>
-						<p>En Mac/Linux</p>
-						<pre><code data-trim contenteditable>
-							$ cd mi-app
-						</code></pre>
-						<pre><code data-trim contenteditable>
-							$ . bin/activate
-						</code></pre>
-
-						<p>En Windows</p>
-						<pre><code data-trim contenteditable>
-							$ cd Scripts
-						</code></pre>
-						<pre><code data-trim contenteditable>
-							$ activate
-						</code></pre>
-						<pre><code data-trim contenteditable>
-							$ cd ..
-						</code></pre>
-					</section>
-					<aside class="notes"></aside>
-				</section>
-
-				<section>
-					<section>
-						<h3>¡Hola Git! Crear repositorio GIT local</h3>
-						<pre><code data-trim contenteditable>
-							$ git init repo
-						</code></pre>
-						<pre><code data-trim contenteditable>
-							$ cd repo
-						</codE></pre>
-					</section>
-					<aside class="notes"></aside>
-
-					<section>
-						<h3>Enviar el repo a GitHub</h3>
-						<p>En Windows, abrir GitHub y publicar repositorio en GitHub..</p>
-						<p>En Linux y Mac, crear repositorio en GitHub. Ir a tu directorio local (repo) y agregar el repositorio remoto recien creado.</p>
-						<pre><code data-trim contenteditable>git remote add origin https://github.com/mi-usuario-en-github/mi-app-datos.git</code></pre>
-					</section>
-					<aside class="notes">					</aside>
-
-					<section>
-						<h3>Crear tu primer archivo</h3>
-						<p>un archivo en blanco README con una extension Markdown</p>
-						<p>En Mac o Linux</p>
-						<pre><code data-trim contenteditable>$ touch README.md</code></pre>
-						<p>En Windows</p>
-						<pre><code data-trim contenteditable>$ start notepad++ README.md</code></pre>
-					</section>
-					<aside class="notes"></aside>
-
-					<section>
-						<h3>Abrir README.md en tu editor preferido</h3>
-						<p>Escribir algo como</p>
-						<pre>
-							<code contenteditable>
-									Mi primera aplicación de datos
-									==============================
-							</code>
-						</pre>
-						<p>Guardarlo.</p>
-					</section>
-					<aside class="notes"></aside>
-
-					<section>
-						<h3>Agregarlo a Git</h3>
-						<p></p>
-						<pre>
-							<code data-trim contenteditable>
-								$ git add README.md
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git commit -m "Primer commit"
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git push origin master
-							</code>
-						</pre>
-					</section>
-					<aside class="notes"></aside>
 				</section>
 
 				<section>
@@ -215,19 +103,14 @@
 					<aside class="notes">Flask es un python microframework que usaremos para hacer la app.</aside>
 
 					<section>
-						<h3>Crear archivo app.py</h3>
-						<p>para configurar Flask</p>
+						<h3>Crear directorio para la aplicación y archivo app.py</h3>
+						<p>con app.py configuremos Flask y servira como backend de nuestro proyecto.</p>
 						<pre>
 							<code data-trim contenteditable>
-								# Mac y Linux:
-								$ touch app.py
+								$ mkdir mi-app
 							</code>
 						</pre>
-						<pre><code data-trim contenteditable>
-								# Windows:
-								$ start notepad++ app.py
-							</code>
-						</pre>
+						<p>Guardar app.py dentro de mi-app</p>
 					</section>
 					<aside class="notes"></aside>
 
@@ -261,8 +144,8 @@
 					<aside class="notes"></aside>
 
 					<section>
-						<h3>Ir a linea de comandos</h3>
-						<p>crear directorio templates en el mismo repositorio en que estamos.</p>
+						<h3>Crear directorio "templates"</h3>
+						<p>dentro del directorio de nuestro proyecto.</p>
 						<pre>
 							<code data-trim contenteditable>
 								$ mkdir templates
@@ -321,34 +204,12 @@
 							</code>
 						</pre>
 					</section>
-
-					<section>
-						<h3>Agrega tu trabajo a GIT</h3>
-						<p>cancela lo que este corriendo de app.py (CTR-C) en la terminal</p>
-						<pre>
-							<code data-trim contenteditable>
-								$ git add .
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git commit -m "Flask app.py and first template"
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git push origin master
-							</code>
-						</pre>
-					</section>
 				</section>
 
 				<section>
 					<section>
 						<h3>¡Hola HTML!</h3>
 						<p>Comenzar nuevamente editando index.html. Reemplazar el contenido por el esqueleto de un archivo HTML</p>
-						<pre>
-
 								<xmp>
 									<!doctype html>
 									<html lang="es">
@@ -358,28 +219,8 @@
 									    </body>
 									</html>
 								</xmp>
+					</section>
 
-						</pre>
-					</section>
-					<section>
-						<h3>Commitear los cambios al repositorio</h3>
-						<p></p>
-						<pre>
-							<code data-trim contenteditable>
-								$ git add templates/index.html
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git commit -m "Real HTML"
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git push origin master
-							</code>
-						</pre>
-					</section>
 					<section>
 						<h3>Crear directorio para guardar archivos estáticos</h3>
 						<p>Aqui guardaremos el CSV con nuestros datos</p>
@@ -389,25 +230,12 @@
 							</code>
 						</pre>
 					</section>
+
 					<section>
 						<h3>Guardar archivo CSV</h3>
-						<p>descargarlo desde <a href="https://github.com/gabelula/first-news-app-espanaenllamas/blob/master/static/incendios.csv">https://github.com/gabelula/first-news-app-espanaenllamas/</a>, carpeta static, archivo incendios.csv y guardarlo en directorio static. Agregarlo a git</p>
-						<pre>
-							<code data-trim contenteditable>
-								$ git add static
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git commit -m "Agregando fuente de datos CSV"
-							</code>
-						</pre>
-						<pre>
-							<code data-trim contenteditable>
-								$ git push origin master
-							</code>
-						</pre>
+						<p>descargarlo desde <a href="https://github.com/gabelula/first-news-app-espanaenllamas/blob/master/static/incendios.csv">https://github.com/gabelula/first-news-app-espanaenllamas/</a> y guardarlo en directorio "static".</p>
 					</section>
+
 					<section>
 						<h3>Abrir app.py en editor de texto</h3>
 						<p>Usaremos libreria csv para acceder a nuestros datos</p>
@@ -418,7 +246,7 @@
 								from flask import render_template
 								app = Flask(__name__)
 
-								csv_path = './static/incendio.csv'
+								csv_path = './static/incendios.csv'
 								csv_obj = csv.DictReader(open(csv_path, 'r'))
 								csv_list = list(csv_obj)
 
@@ -447,7 +275,7 @@
 								from flask import render_template
 								app = Flask(__name__)
 
-								csv_path = './static/la-riots-deaths.csv'
+								csv_path = './static/incendios.csv'
 								csv_obj = csv.DictReader(open(csv_path, 'r'))
 								csv_list = list(csv_obj)
 
@@ -471,7 +299,6 @@
 					<section>
 						<h3>Guardar app.py y editar index.html</h3>
 						<p>Colocar la lista del csv en el index.html</p>
-						<pre>
 								<xmp>
 									<!doctype html>
 									<html lang="es">
@@ -482,8 +309,9 @@
 											</body>
 									</html>
 								</xmp>
-						</pre>
-						<p>En linea de comandos correr app.py y visitar http://localhost:8000 nuevamente</p>
+						<p>En linea de comandos correr app.py
+							<pre><code>$ python app.py</code></pre>
+							y visitar http://localhost:8000 nuevamente</p>
 					</section>
 					<section>
 						<h3>Vamos a darle formato a los datos en index.html</h3>
@@ -542,14 +370,7 @@
 					</section>
 					<section>
 						<h3>Refrescar el navegador</h3>
-						<p>y luego commitear tu trabajo</p>
-						<pre>
-							<code contenteditable>
-								$ git add .
-								$ git commit -m "Creamos tabla de datos"
-								$ git push origin master
-							</code>
-						</pre>
+						<p>http://localhost:8000</p>
 					</section>
 				</section>
 
@@ -708,17 +529,6 @@
 	</body>
 </xmp>
 					</section>
-
-					<section>
-						<h3>Commitear en GIT</h3>
-						<pre>
-							<code contenteditable>
-								$ git add .
-								$ git commit -m "Creamos una página por incendio."
-								$ git push origin master
-							</code>
-						</pre>
-					</section>
 				</section>
 
 				<section>
@@ -728,10 +538,12 @@
 <xmp>
   <head>
 
-		<meta name="Incendios en España"  content="text/html;" http-equiv="content-type" charset="utf-8">
+		<meta name="Incendios en España"  content="text/html;"
+		http-equiv="content-type" charset="utf-8">
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-    <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+    <script type="text/javascript"
+		src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
 
 	</head>
 </xmp>
@@ -842,18 +654,6 @@
 					</section>
 
 					<section>
-						<h3>Comitear los cambios</h3>
-						<p></p>
-						<pre>
-							<code contenteditable>
-								$ git add .
-								$ git commit -m "Agregamos un mapa a la página principal."
-								$ git push origin master
-							</code>
-						</pre>
-					</section>
-
-					<section>
 						<h3>Editar detail.html</h3>
 						<p>para agregar un mapa especifico del incendio.</p>
 						<xmp>
@@ -869,7 +669,7 @@
 							      <h1>Incendio de {{ object['COMUNIDAD'].decode('UTF-8') }}</h1>
 							      <p>En la comunidad {{ object['COMUNIDAD'].decode('UTF-8') }}, provincia {{ object['PROVINCIA'].decode('UTF-8') }}, comarca {{ object['COMARCA'].decode('UTF-8') }}, municipio {{ object['MUNICIPIO'].decode('UTF-8') }} se quemó una superficie forestal de {{ object['SUPQUEMADA'] }}. Hubieron {{ object['MUERTOS'] }} muertos y {{ object['HERIDOS'] }} heridos. Se detectó en la fecha {{ object['FECHA'] }}. Se pudo controlar en {{ object['TIME_CTRL'] }} minutos y extinguir en {{ object['TIME_EXT'] }} minutos. La causa del incendio fue {{ object['CAUSA'].decode('UTF-8') }}. En la extinción del incendio participaron {{ object['PERSONAL'] }} personas, {{ object['PESADOS'] }} vehiculos pesados y {{ object['AEREOS'] }} medios aereos.</p>
 							      <script type="text/javascript">
-							        var map = L.map('map').setView([{{ object['LONGITUD'] }}, {{ object['LATITUD'] }}], 16);
+							        var map = L.map('map').setView([{{ object['LATITUD'] }}, {{object['LONGITUD'] }}], 16);
 							        var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
 							            maxZoom: 18,
 							            attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
@@ -883,17 +683,6 @@
 						</xmp>
 					</section>
 
-					<section>
-						<h3>Comitear los cambios</h3>
-						<p></p>
-						<pre>
-							<code contenteditable>
-								$ git add .
-								$ git commit -m "Agregamos un mapa a la página de detalle."
-								$ git push origin master
-							</code>
-						</pre>
-					</section>
 				</section>
 
 				<section>
@@ -977,15 +766,38 @@
 							</code>
 						</pre>
 					</section>
+				</section>
+
+				<section>
 
 					<section>
-						<h3>Comiteamos los cambios</h3>
+						<h3>Git y GitHub para publicarlo a Internet</h3>
+						<p>(bonus)</p>
+					</section>
+
+					<section>
+						<h3>Inicializemos GIT localmente</h3>
 						<p></p>
 						<pre>
 							<code data-trim contenteditable>
+								$ git init
 								$ git add .
-								$ git commit -m "Congelamos la app"
-								$ git push origin master
+								$ git commit -m "Agregamos todo el proyecto a GIT"
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<h3>Creamos cuenta en GitHub</h3>
+						<p>Ir a <a href="http://github.com">http://github.com<a> y crear cuenta.</p>
+					</section>
+
+					<section>
+						<h3>Creamos repositorio en GitHub</h3>
+						<p>Y lo agregamos localmente</p>
+						<pre>
+							<code data-trim contenteditable>
+								$ git remote add origin http://github.com/.../.../
 							</code>
 						</pre>
 					</section>
@@ -995,23 +807,24 @@
 						<p>Para esto sólo tenemos que crear un branch gh-pages en nuestro repositorio.</p>
 						<pre>
 							<code data-trim contenteditable>
-								$ git checkout -b gh-pages # Create the new branch
-								$ git merge master # Pull in all the code from the master branch
-								$ git push origin gh-pages # Push up to GitHub from your new branch
+								$ git checkout -b gh-pages # Crear el nuevo ramal
+								$ git merge master # Colocarle el codigo del ramal en el que trabajamos
+								$ git push origin gh-pages # Publicar desde nuevo ramal a GitHub
 							</code>
 						</pre>
 					</section>
 
 					<section>
 						<h3>Luego de unos minutos tu app estara publicada en</h3>
-						<p><a href="http://gabelula.github.io/first-news-app-espanaenllamas/build/">http://tunombredeusuario.github.io/mi-app/build/index.html</a></p>
+						<p><a href="http://gabelula.github.io/first-news-app-espanaenllamas/build/">http://tunombredeusuario.github.io/tuapp/build/index.html</a></p>
+					</section>
 				</section>
 
 				<section>
 					<h3>Tutoriales y Referencias en linea</h3>
 					<ol>
 						<li>Git y GitHub <a href="http://git-scm.com/book/es/">Pro GIT</a>.</li>
-						<li>Esta presentación en <a href="https://github.com/gabelula/first-news-presentacion">mi primera aplicación de datos</a></li>
+						<li>Esta presentación en <a href="https://github.com/gabelula/first-news-barna">mi primera aplicación de datos</a></li>
 						<li>La inspiración para este taller viene del mismo dado por <a href="http://first-news-app.readthedocs.org/en/latest">Ben Welsh durante NICAR 2014</a>.</li>
 						<li>Tutorial de <a href="http://flask.pocoo.org/docs/tutorial/">Flask</a> (en ingles)</li>
 						<li>Documentación sobre <a href="http://es.diveintopython.net/toc.html">Python</a> y <a href="http://www.pip-installer.org/en/latest/">Pip</a></li>
