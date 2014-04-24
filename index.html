@@ -103,14 +103,13 @@
 					<aside class="notes">Flask es un python microframework que usaremos para hacer la app.</aside>
 
 					<section>
-						<h3>Crear directorio para la aplicación y archivo app.py</h3>
-						<p>con app.py configuremos Flask y servira como backend de nuestro proyecto.</p>
+						<h3>Crear directorio en donde pondremos archivos con código de la aplicación</h3>
 						<pre>
 							<code data-trim contenteditable>
 								$ mkdir mi-app
 							</code>
 						</pre>
-						<p>Guardar app.py dentro de mi-app</p>
+						<p>Adentro crear archivo llamado app.py, donde configuremos Flask y servira como backend de nuestro proyecto.</p>
 					</section>
 					<aside class="notes"></aside>
 
@@ -155,17 +154,11 @@
 					<aside class="notes"></aside>
 
 					<section>
-						<h3>Crear index.html</h3>
-						<p>dentro del directorio templates</p>
+						<h3>Crear "index.html"</h3>
+						<p>dentro del directorio "templates" y colocarle cualquier texto.</p>
 						<pre>
 							<code data-trim contenteditable>
-								# Macs y Linux:
-								$ touch templates/index.html
-							</code>
-						</pre>
-						<pre><code data-trim contenteditable>
-								# Windows:
-								$ start notepad++ templates/index.html
+								¡Hola Mundo!
 							</code>
 						</pre>
 					</section>
@@ -209,7 +202,7 @@
 				<section>
 					<section>
 						<h3>¡Hola HTML!</h3>
-						<p>Comenzar nuevamente editando index.html. Reemplazar el contenido por el esqueleto de un archivo HTML</p>
+						<p>Comenzar nuevamente editando "index.html". Reemplazar el contenido por el esqueleto de un archivo HTML</p>
 								<xmp>
 									<!doctype html>
 									<html lang="es">
@@ -219,6 +212,9 @@
 									    </body>
 									</html>
 								</xmp>
+								<p>En linea de comandos correr app.py
+									<pre><code>$ python app.py</code></pre>
+									y visitar http://localhost:8000 nuevamente</p>
 					</section>
 
 					<section>
@@ -338,10 +334,10 @@
 					</section>
 					<section>
 						<h3>Refrescar el navegador con nuestra aplicación</h3>
-						<p>Colocaremos más datos en la table.</p>
 						<xmp>
 								    <table border=1 cellpadding=7>
 							        <tr>
+													<th>Identificador</th>
 							            <th>Superficie Forestal Quemada</th>
 							            <th>Fecha</th>
 							            <th>Muertos</th>
@@ -354,6 +350,7 @@
 							        </tr>
 							    {% for obj in object_list %}
 							        <tr>
+													<td>{{ obj['IDPIF'] }}</td>
 							            <td>{{ obj['SUPQUEMADA'] }}</td>
 							            <td>{{ obj['FECHA'] }}</td>
 							            <td>{{ obj['MUERTOS'] }}</td>
@@ -369,15 +366,15 @@
 						</xmp>
 					</section>
 					<section>
-						<h3>Refrescar el navegador</h3>
+						<h3>Refrescar el navegador para nuestra app</h3>
 						<p>http://localhost:8000</p>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h3>Agreguemos página de detalles por incendio</h3>
-						<p>Agregamos una nueva ruta en app.py</p>
+						<h3>Ahora página de detalles por incendio</h3>
+						<p>Agregamos una nueva ruta en archivo "app.py"</p>
 						<pre>
 							<code contenteditable>
 								import csv
@@ -405,7 +402,7 @@
 					</section>
 
 					<section>
-						<h3>Agreguemos el template detail.html</h3>
+						<h3>Agreguemos el template "detail.html"</h3>
 						<p></p>
 						<pre>
 							<code data-trim contenteditable>
@@ -440,6 +437,7 @@
 								csv_path = './static/incendios.csv'
 								csv_obj = csv.DictReader(open(csv_path, 'r'))
 								csv_list = list(csv_obj)
+
 								csv_dict = dict([[o['IDPIF'], o] for o in csv_list])
 							</code>
 						</pre>
@@ -449,19 +447,19 @@
 						<h3>Editamos la función detail en app.py</h3>
 						<p>para que conecte el número en la URL con el registro correspondiente.</p>
 						<pre>
-							<code contenteditable>
+
 								@app.route('/<number>/')
+
 								def detail(number):
 								    return render_template('detail.html',
 								        object=csv_dict[number],
 								    )
-							</code>
 						</pre>
 					</section>
 
 					<section>
 						<h3>Volver a editar detail.html</h3>
-						<p></p>
+						<p>para agregarle datos desde nuestro CSV</p>
 <xmp>
 		<!doctype html>
 		<html lang="es">
@@ -487,7 +485,7 @@
 					</section>
 
 					<section>
-						<h3>Editar index.html para enlazar la página del incendio</h3>
+						<h3>Editar "index.html" para enlazar la página del incendio</h3>
 						<p>En la tag table reemplazar la fila de
 							<xmp><td>{{ obj['IDPIF'] }}</td></xmp>
 								por
@@ -534,7 +532,7 @@
 				<section>
 					<section>
 						<h2>¡Hola Javascript!</h2>
-						<p>Ahora vamos a colocar un mapa con los incendios usando una libreria de Javascript llamada Leaflet. Primero hay que importarla en el index.html</p>
+						<p>Ahora vamos a colocar un mapa con los incendios usando una libreria de Javascript llamada Leaflet. Primero hay que importarla en el archivo "index.html"</p>
 <xmp>
   <head>
 
@@ -551,72 +549,136 @@
 
 					<section>
 						<h3>Crear un elemento HTML para el mapa</h3>
-						<p>y usar Leaflet para centrarlo en España</p>
 						<pre>
 							<code contenteditable>
-								<body>
+								  ... inicio del body ...
+
 									<div id="map" style="width:100%; height:300px;"></div>
+
 									... aca esta la table ...
-							    <script type="text/javascript">
-							      var map = L.map('map').setView([40.2085,-3.713], 6);
-							      var mapquestLayer =
-										new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-							          maxZoom: 18,
-							          attribution: 'Data, imagery and map information provided by
-												<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,
-												<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>
-												and contributors.',
-							          subdomains: ['otile1','otile2','otile3','otile4']
-							      });
-							      map.addLayer(mapquestLayer);
-							    </script>
-								</body>
+
+							</code>
+					  </pre>
+					</section>
+					<section>
+						<h3>Y usar <strong>Leaflet</strong> para centrarlo en España</h3>
+						<xmp>
+						    <script type="text/javascript">
+
+						      var map = L.map('map').setView([40.2085,-3.713], 6);
+
+						      var mapquestLayer =
+									new L.TileLayer(
+										'http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+						          maxZoom: 18,
+						          attribution: 'Data, imagery and map information provided by
+											<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,
+											<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>
+											and contributors.',
+						          subdomains: ['otile1','otile2','otile3','otile4']
+						      });
+
+						      map.addLayer(mapquestLayer);
+
+						    </script>
+							</body>
+						</xmp>
+					</section>
+
+					<section>
+						<h3>Inicializamos el mapa con las coordenadas de España y nivel de zoom</h3>
+						<pre>
+							<code contenteditable>
+								<script type="text/javascript">
+
+									var map = L.map('map').setView([40.2085,-3.713], 6);
+
+									...
+
+								</script>
 							</code>
 						</pre>
 					</section>
 
+
 					<section>
-						<h3>Transformar los datos que tenemos en GeoJSON, que lea Leaflet</h3>
-						<p>Lo hacemos en el mismo Javascript</p>
+						<h3>Agregamos la capa de tiles desde mapquest, que utiliza open street map.</h3>
+						<p>Se le pasa la URL para las imagenes de tiles, el nivel máximo de zoom (18) y el texto sobre de donde vienen los mapas.</p>
+						<pre>
+							<code contenteditable>
+								<script type="text/javascript">
+
+									...
+
+									var mapquestLayer =
+									new L.TileLayer(
+										'http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+											maxZoom: 18,
+											attribution: '[...]',
+											subdomains: ['otile1','otile2','otile3','otile4']
+									});
+
+									...
+
+								</script>
+							</code>
+						</pre>
+					</section>
+
+
+					<section>
+						<h3>Le agregamos el layer al elemento del mapa</h3>
+						<pre>
+							<code contenteditable>
+								<script type="text/javascript">
+
+									...
+
+									map.addLayer(mapquestLayer);
+
+								</script>
+							</code>
+						</pre>
+					</section>
+
+
+					<section>
+						<h3>Transformar los datos del CSV que tenemos a GeoJSON</h3>
 						<p>GeoJSON es un formato para guardar estructuras de datos geograficos junto a información no geografica</p>
 						<pre>
 							<code contenteditable>
-								    <script type="text/javascript">
-								      var map = L.map('map').setView([40.2085,-3.713], 6);
-								      var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-								          maxZoom: 18,
-								          attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
-								          subdomains: ['otile1','otile2','otile3','otile4']
-								      });
-								      map.addLayer(mapquestLayer);
+  <script type="text/javascript">
+		...
 
-								      var data = {
-								        "type": "FeatureCollection",
-								        "features": [
-								          {% for obj in object_list %}
-								          {
-								            "type": "Feature",
-								            "properties": {
-								              "causa": "{{ obj['CAUSA'].decode('UTF-8') }}",
-								              "id": "{{ obj['IDPIF'] }}"
-								            },
-								            "geometry": {
-								              "type": "Point",
-								              "coordinates": [{{ obj['LONGITUD'] }}, {{ obj['LATITUD'] }}]
-								            }
-								          }{% if not loop.last %},{% endif %}
-								          {% endfor %}
-								        ]
-								      };
-								      var dataLayer = L.geoJson(data);
-								      map.addLayer(dataLayer);
-								    </script>
+    var data = {
+      "type": "FeatureCollection",
+      "features": [
+        {% for obj in object_list %}
+        {
+          "type": "Feature",
+          "properties": {
+            "causa": "{{ obj['CAUSA'].decode('UTF-8') }}",
+            "id": "{{ obj['IDPIF'] }}"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [{{ obj['LONGITUD'] }}, {{ obj['LATITUD'] }}]
+          }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    };
+
+		var dataLayer = L.geoJson(data);
+
+		map.addLayer(dataLayer);
+  </script>
 							</code>
 						</pre>
 					</section>
 
 					<section>
-						<h3>Agregar una ventanita popup que muestre información de la superficie quemada</h3>
+						<h3>Agregar una ventanita popup que muestre información sobre el incendio</h3>
 						<p>Sustituir</p>
 						<pre>
 							<code data-trim contenteditable>
@@ -654,33 +716,34 @@
 					</section>
 
 					<section>
-						<h3>Editar detail.html</h3>
-						<p>para agregar un mapa especifico del incendio.</p>
-						<xmp>
-							<!doctype html>
-							<html lang="es">
-							  <head>
-							   <meta name="Incendios en España"  content="text/html;" http-equiv="content-type" charset="utf-8">
-							   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-							   <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
-							  </head>
-							  <body>
-							      <div id="map" style="width:100%; height:300px;"></div>
-							      <h1>Incendio de {{ object['COMUNIDAD'].decode('UTF-8') }}</h1>
-							      <p>En la comunidad {{ object['COMUNIDAD'].decode('UTF-8') }}, provincia {{ object['PROVINCIA'].decode('UTF-8') }}, comarca {{ object['COMARCA'].decode('UTF-8') }}, municipio {{ object['MUNICIPIO'].decode('UTF-8') }} se quemó una superficie forestal de {{ object['SUPQUEMADA'] }}. Hubieron {{ object['MUERTOS'] }} muertos y {{ object['HERIDOS'] }} heridos. Se detectó en la fecha {{ object['FECHA'] }}. Se pudo controlar en {{ object['TIME_CTRL'] }} minutos y extinguir en {{ object['TIME_EXT'] }} minutos. La causa del incendio fue {{ object['CAUSA'].decode('UTF-8') }}. En la extinción del incendio participaron {{ object['PERSONAL'] }} personas, {{ object['PESADOS'] }} vehiculos pesados y {{ object['AEREOS'] }} medios aereos.</p>
-							      <script type="text/javascript">
-							        var map = L.map('map').setView([{{ object['LATITUD'] }}, {{object['LONGITUD'] }}], 16);
-							        var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-							            maxZoom: 18,
-							            attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
-							            subdomains: ['otile1','otile2','otile3','otile4']
-							        });
-							        map.addLayer(mapquestLayer);
-							        var marker = L.marker([{{ object['LONGITUD'] }}, {{ object['LATITUD'] }}]).addTo(map);
-							    </script>
-							  </body>
-							</html>
-						</xmp>
+						<h3>Hacemos lo mismo en "detail.html"</h3>
+						<p>agregamos un mapa del incendio.</p>
+						<pre>
+							<code>
+	<div id="map" style="width:100%; height:300px;"></div>
+
+	...
+
+	<script type="text/javascript">
+
+	  var map = L.map('map').setView([ {{ object['LATITUD'] }},
+																		 {{object['LONGITUD'] }}], 16);
+
+	  var mapquestLayer = new L.TileLayer(
+			'http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png',
+			{
+	      maxZoom: 18,attribution: 'attribution [...]',
+	      subdomains: ['otile1','otile2','otile3','otile4']
+	  });
+
+	  map.addLayer(mapquestLayer);
+
+	  var marker = L.marker([{{ object['LONGITUD'] }},
+		                       {{ object['LATITUD'] }}]).addTo(map);
+
+	</script>
+</body>
+						</code></pre>
 					</section>
 
 				</section>
@@ -688,8 +751,13 @@
 				<section>
 					<section>
 						<h3>¡Hola Internet!</h3>
-						<p>Ahora publicaremos nuestra aplicación de datos en Internet. Vamos a usar Frozen Flask, una libreria de Python que crea una página estatica por cada página que hicimos.</p>
-						<p>Usar pip para instalar Frosen Flask</p>
+						<p>Ahora publicaremos nuestra aplicación de datos en Internet. Vamos a usar Frozen Flask para generar archivos estaticos desde nuestra app.</p>
+					</section>
+
+					<section>
+						<h3>Frozen Flask</h3>
+						<p>una libreria de Python que crea una página estatica por cada página que hicimos.</p>
+						<p>Usar pip para instalar Frozen Flask</p>
 						<pre>
 							<code data-trim contenteditable>
 								$ pip install Frozen-Flask
@@ -699,35 +767,22 @@
 
 					<section>
 						<h3>Crear un archivo freeze.py</h3>
-						<p></p>
+						<p>en el mismo directorio que app.py</p>
 						<pre>
 							<code contenteditable>
-								# Mac y Linux:
-								$ touch freeze.py
-								# Windows:
-								$ start notepad++ freeze.py
-							</code>
-						</pre>
-					</section>
+		from flask_frozen import Freezer
+		from app import app
+		freezer = Freezer(app)
 
-					<section>
-						<h3>Editar freeze.py</h3>
-						<p></p>
-						<pre>
-							<code  contenteditable>
-								from flask_frozen import Freezer
-								from app import app
-								freezer = Freezer(app)
-
-								if __name__ == '__main__':
-								    freezer.freeze()
+		if __name__ == '__main__':
+		    freezer.freeze()
 							</code>
 						</pre>
 					</section>
 
 					<section>
 						<h3>Correrlo desde linea de comandos</h3>
-						<p>Esto creara un directorio build con un monton de archivos estaticos.</p>
+						<p>Se creará un directorio <strong>build</strong> con un monton de archivos estaticos.</p>
 						<pre>
 							<code data-trim contenteditable>
 								$ python freeze.py
@@ -738,7 +793,7 @@
 
 					<section>
 						<h3>Usar el navegador</h3>
-						<p>para mirar uno de los archivos generados en build. Lo único que paso a estaticos fueron las páginas de index.html. Tenemos que editar freeze.py para incluir detail.html</p>
+						<p>para abrir uno de los archivos generados en <strong>build</strong>. Lo único que paso a estaticos fueron las páginas de "index.html". Tenemos que editar freeze.py para incluir "detail.html"</p>
 						<pre>
 							<code  contenteditable>
 								from flask_frozen import Freezer
@@ -759,27 +814,32 @@
 
 					<section>
 						<h3>Correrlo desde linea de comandos</h3>
-						<p>Ahora se generan muchos más archivos en build.</p>
+						<p>Ahora se generan muchos más archivos en <strong>build</strong>.</p>
 						<pre>
 							<code data-trim contenteditable>
 								$ python freeze.py
 							</code>
 						</pre>
 					</section>
+
 				</section>
 
 				<section>
-
 					<section>
-						<h3>Git y GitHub para publicarlo a Internet</h3>
-						<p>(bonus)</p>
+						<h3>¡Hola GIT!</h3>
+						<p>GitHub Pages hostea páginas estaticas de forma gratuita</p>
+						<ul>
+							<li>En Windows: http://windows.github.com</li>
+							<li>En Mac: http://mac.github.com</li>
+							<li>En Linux: apt-get install git</li>
+						</ul>
 					</section>
 
 					<section>
 						<h3>Inicializemos GIT localmente</h3>
-						<p></p>
+						<p>En linea de comandos</p>
 						<pre>
-							<code data-trim contenteditable>
+							<code contenteditable>
 								$ git init
 								$ git add .
 								$ git commit -m "Agregamos todo el proyecto a GIT"
@@ -789,12 +849,12 @@
 
 					<section>
 						<h3>Creamos cuenta en GitHub</h3>
-						<p>Ir a <a href="http://github.com">http://github.com<a> y crear cuenta.</p>
+						<p>Ir a <a href="http://github.com">http://github.com</a> y crear cuenta.</p>
 					</section>
 
 					<section>
 						<h3>Creamos repositorio en GitHub</h3>
-						<p>Y lo agregamos localmente</p>
+						<p>Y lo agregamos a nuestro GIT local</p>
 						<pre>
 							<code data-trim contenteditable>
 								$ git remote add origin http://github.com/.../.../
@@ -806,11 +866,11 @@
 						<h3>Finalmente publiquemos la app en github-pages</h3>
 						<p>Para esto sólo tenemos que crear un branch gh-pages en nuestro repositorio.</p>
 						<pre>
-							<code data-trim contenteditable>
-								$ git checkout -b gh-pages # Crear el nuevo ramal
-								$ git merge master # Colocarle el codigo del ramal en el que trabajamos
-								$ git push origin gh-pages # Publicar desde nuevo ramal a GitHub
-							</code>
+	<code contenteditable>
+	$ git checkout -b gh-pages # Crear el nuevo ramal
+	$ git merge master # Colocarle el codigo del ramal en el que trabajamos
+	$ git push origin gh-pages # Publicar desde nuevo ramal a GitHub
+	</code>
 						</pre>
 					</section>
 
@@ -818,6 +878,7 @@
 						<h3>Luego de unos minutos tu app estara publicada en</h3>
 						<p><a href="http://gabelula.github.io/first-news-app-espanaenllamas/build/">http://tunombredeusuario.github.io/tuapp/build/index.html</a></p>
 					</section>
+
 				</section>
 
 				<section>
@@ -834,8 +895,9 @@
 				</section>
 
 				<section>
-					<h1>¿Comentarios?</h1>
-					<h3>Por @gaba</h3>
+					<h1>¡Gracias!</h1>
+					<h3>@gaba</h3>
+					<h3>gaba@datauy.org</h3>
 				</section>
 
 			</div>
