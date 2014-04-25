@@ -565,7 +565,7 @@
 						<xmp>
 						    <script type="text/javascript">
 
-						      var map = L.map('map').setView([40.2085,-3.713], 6);
+						      var map = L.map('map').setView([40.2085,-3.713], 14);
 
 						      var mapquestLayer =
 									new L.TileLayer(
@@ -738,8 +738,7 @@
 
 	  map.addLayer(mapquestLayer);
 
-	  var marker = L.marker([{{ object['LONGITUD'] }},
-		                       {{ object['LATITUD'] }}]).addTo(map);
+  	L.marker([{{ object['LATITUD'] }},{{ object['LONGITUD'] }}]).addTo(map);
 
 	</script>
 </body>
@@ -854,7 +853,7 @@
 
 					<section>
 						<h3>Creamos repositorio en GitHub</h3>
-						<p>Y lo agregamos a nuestro GIT local</p>
+						<p>Y lo agregamos a nuestro GIT local. Las instrucciones aparecen en la misma pagina web de github.com donde crearon el repositorio.</p>
 						<pre>
 							<code data-trim contenteditable>
 								$ git remote add origin http://github.com/.../.../
@@ -868,7 +867,6 @@
 						<pre>
 	<code contenteditable>
 	$ git checkout -b gh-pages # Crear el nuevo ramal
-	$ git merge master # Colocarle el codigo del ramal en el que trabajamos
 	$ git push origin gh-pages # Publicar desde nuevo ramal a GitHub
 	</code>
 						</pre>
