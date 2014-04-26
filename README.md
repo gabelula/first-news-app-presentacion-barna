@@ -3,4 +3,4 @@ Git y GitHub para Periodistas
 
 Presentación para Periodismo de Datos en Barcelona 2014
 
-Se puede ver en [http://gabelula.github.io/github-para-periodistas-presentacion/#/](http://gabelula.github.io/github-para-periodistas-presentacion/#/)
+Se puede ver en [http://gabelula.github.io/first-news-app-barna/#/](http://gabelula.github.io/first-news-app-barna/)
